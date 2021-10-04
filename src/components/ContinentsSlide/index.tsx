@@ -7,7 +7,7 @@ interface ContinentsProps {
   continents: {
     id: string;
     title: string;
-    description: string;
+    describe: string;
     image: string;
     betterImagePosition: string;
   }[];
@@ -18,7 +18,7 @@ export function ContinentsSlide({ continents }: ContinentsProps) {
     <ContinentDetail
       key={continent.id}
       title={continent.title}
-      description={continent.description}
+      describe={continent.describe}
       imageUrl={continent.image}
       imagePosition={continent.betterImagePosition}
       href={`/continents/${continent.id}`}

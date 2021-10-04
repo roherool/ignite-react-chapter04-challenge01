@@ -4,18 +4,18 @@ import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 
 import { ContinentBanner } from "../../components/ContinentsInfo/ContinentBanner";
 import { ContinentsInfo } from "../../components/ContinentsInfo";
-import { Cities } from "../../components/Cities";
+import { City as Cities } from "../../components/City";
 
 import { api } from "../../services/api";
-import { unsplashApi } from "../../services/unsplashApi";
+import { api_unsplash } from "../../services/unsplash";
 
 interface Continent {
   id: string;
   title: string;
-  description: string;
+  describe: string;
   image: string;
   betterImagePosition: string;
-  bio?: string;
+  biografy?: string;
   countries: number;
   cities: number;
   languages: number;
@@ -58,7 +58,7 @@ export default function Continents({ continent, cities }: ContinentsProps) {
         >
           <Box flex="1" width="100%">
             <Text as="p" fontSize={["md", "lg"]} align="justify" width="100%">
-              {continent.bio ?? "Not implemented"}
+              {continent.biografy ?? "Not implemented"}
             </Text>
           </Box>
           <ContinentsInfo
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const citiesData = citiesResponse.data;
   const cities: City[] = await Promise.all(
     citiesData.map(async (city: City) => {
-      const unsplashResponse = await unsplashApi.get(
+      const unsplashResponse = await api_unsplash.get(
         encodeURI(`/search/photos?page=1&per_page=1&query=${city.id}`)
       );
       return {

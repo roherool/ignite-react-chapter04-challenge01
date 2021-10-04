@@ -1,6 +1,7 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
-import { ToggleThemeColor } from "./ToggleThemeColor";
+import { Flex, Image } from "@chakra-ui/react";
+
 import { BackPageButton } from "./BackPageButton";
+import { ToggleThemeColor } from "./ToggleThemeColor";
 
 export function Header() {
   return (

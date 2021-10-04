@@ -11,7 +11,7 @@ interface HomeProps {
   continents: {
     id: string;
     title: string;
-    description: string;
+    describe: string;
     image: string;
     betterImagePosition: string;
   }[];

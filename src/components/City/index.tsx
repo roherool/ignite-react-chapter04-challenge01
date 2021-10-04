@@ -1,5 +1,6 @@
 import { Flex, Heading, SimpleGrid, FlexProps } from "@chakra-ui/react";
-import { CitiesCard } from "./CitiesCard";
+
+import { CityCard } from "./CityCard";
 
 interface City {
   id: string;
@@ -14,7 +15,7 @@ interface CitiesProps extends FlexProps {
   cities: City[];
 }
 
-export function Cities({ cities, ...rest }: CitiesProps) {
+export function City({ cities, ...rest }: CitiesProps) {
   return (
     <Flex direction="column" width="100%" {...rest}>
       <Heading fontSize={["24", "48"]}>
@@ -22,7 +23,7 @@ export function Cities({ cities, ...rest }: CitiesProps) {
       </Heading>
       <SimpleGrid minChildWidth="256px" gap="45px" mt="12">
         {cities.map((city) => (
-          <CitiesCard key={city.id} city={city} />
+          <CityCard key={city.id} city={city} />
         ))}
       </SimpleGrid>
     </Flex>

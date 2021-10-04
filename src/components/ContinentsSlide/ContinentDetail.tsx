@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ContinentDetailProps {
   href: string;
   title: string;
-  description: string;
+  describe: string;
   imageUrl: string;
   imagePosition?: string;
 }
@@ -12,7 +12,7 @@ interface ContinentDetailProps {
 export function ContinentDetail({
   title,
   href,
-  description,
+  describe,
   imageUrl,
   imagePosition = "center",
 }: ContinentDetailProps) {
@@ -44,7 +44,7 @@ export function ContinentDetail({
             {title}
           </Text>
           <Text fontSize={["12", "24"]} textShadow="3px 3px #777">
-            {description}
+            {describe}
           </Text>
         </Flex>
       </Link>

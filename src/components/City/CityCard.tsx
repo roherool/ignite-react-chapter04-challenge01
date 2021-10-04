@@ -1,4 +1,5 @@
 import { Flex, Text, Avatar, Image, useColorModeValue } from "@chakra-ui/react";
+
 interface City {
   id: string;
   name: string;
@@ -8,11 +9,11 @@ interface City {
   image?: string;
 }
 
-interface CitiesCardProps {
+interface CityCardProps {
   city: City;
 }
 
-export function CitiesCard({ city }: CitiesCardProps) {
+export function CityCard({ city }: CityCardProps) {
   const countryUrl = (city.flag ?? city.country)
     .replace(/[[:blank:]]/g, "-")
     .toLocaleLowerCase();
