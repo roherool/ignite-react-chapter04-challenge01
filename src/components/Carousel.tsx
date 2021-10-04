@@ -1,11 +1,12 @@
 import React, { ReactNode } from "react";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
+import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/pagination"
+// import "swiper/css/navigation"
 
 SwiperCore.use([Navigation, Pagination]);
 

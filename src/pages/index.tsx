@@ -18,7 +18,7 @@ interface HomeProps {
 }
 
 export default function Home({ continents }: HomeProps) {
-  console.log(continents);
+  // console.log(continents);
   return (
     <Flex w="100%" direction="column" pb="12">
       <HomeBanner />
