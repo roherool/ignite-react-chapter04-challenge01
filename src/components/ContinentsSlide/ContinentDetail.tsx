@@ -23,7 +23,7 @@ export function ContinentDetail({
       bgSize="cover"
       bgPosition={imagePosition}
       color="default.light.text"
-      h="100%"
+      h="450px"
       w="100%"
     >
       <Link href={href} passHref>

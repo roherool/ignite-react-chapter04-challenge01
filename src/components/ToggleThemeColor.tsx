@@ -7,7 +7,7 @@ export function ToggleThemeColor() {
     <IconButton
       aria-label="Alterar cores"
       icon={colorMode === "light" ? <RiMoonLine /> : <RiSunLine />}
-      onClick={ToggleThemeColor}
+      onClick={toggleColorMode}
       variant="ghost"
       spacing="8"
       fontSize={["16", "32"]}

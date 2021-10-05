@@ -81,11 +81,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { name } = params;
-  const continentsResponse = await api.get(`/continents/${String(name)}`);
+  const { slug } = params;
+  const continentsResponse = await api.get(`/continents/${String(slug)}`);
   const continent = continentsResponse.data;
 
-  const citiesResponse = await api.get(`/cities?continent=${String(name)}`);
+  const citiesResponse = await api.get(`/cities?continent=${String(slug)}`);
   const citiesData = citiesResponse.data;
   const cities: City[] = await Promise.all(
     citiesData.map(async (city: City) => {

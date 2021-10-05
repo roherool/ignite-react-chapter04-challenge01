@@ -6,7 +6,7 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css/bundle";
 import "swiper/css";
 import "swiper/css/pagination"
-// import "swiper/css/navigation"
+import "swiper/css/navigation"
 
 SwiperCore.use([Navigation, Pagination]);
 
